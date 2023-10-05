@@ -59,6 +59,23 @@ public class BusinessLogic {
 		}
 		
 		
+		void insertData() throws SQLException {
+
+			Connection connection = ConnectDB.setupConnection();
+
+			String query = "INSERT INTO  product_01(id,cost,name,description) VALUES (666, 300,'LipStick','Good Product')";
+
+			PreparedStatement myStmt = connection.prepareStatement(query);
+
+			boolean success = myStmt.execute();
+
+			System.out.println("insert Successfully " + success);
+
+		}
+
+		
+		
+		
 			void updateData() throws SQLException   {
 
 				Connection connection = ConnectDB.setupConnection();

@@ -20,6 +20,9 @@ public class ControllerTester {
 		     	bl.createData();
 
 				bl.readData();
+				
+				bl.insertData();
+				bl.readData();
 
 		     	bl.deletData();
 
